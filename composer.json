@@ -1,0 +1,52 @@
+{
+    "name": "phpdevsr/rector-codeigniter4",
+    "type": "rector-extension",
+    "license": "MIT",
+    "description": "Rector upgrades rules for Codeigniter4",
+    "require": {
+        "php": ">=7.4",
+        "rector/rector": "^1.0"
+    },
+    "require-dev": {
+        "phpstan/extension-installer": "^1.3",
+        "phpstan/phpstan": "^1.10.2",
+        "phpstan/phpstan-strict-rules": "^1.5",
+        "phpunit/phpunit": "^10.5",
+        "codeigniter/phpstan-codeigniter": "^1.4",
+        "symplify/rule-doc-generator": "^12.1",
+        "codeigniter/coding-standard": "^1.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "PHPDevsr\\Rector\\Codeigniter4\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PHPDevsr\\Rector\\Codeigniter4\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "phpstan": "vendor/bin/phpstan analyse --ansi",
+        "phpstan-generate": "vendor/bin/phpstan analyse --ansi --generate-baseline",
+        "lint": "vendor/bin/php-cs-fixer fix --verbose --ansi --dry-run --diff",
+        "lint-fix": "vendor/bin/php-cs-fixer fix --verbose --ansi --diff",
+        "rector": "vendor/bin/rector process --dry-run --ansi",
+        "rector-fix": "vendor/bin/rector process --ansi",
+        "phpunit": "vendor/bin/phpunit tests/",
+        "docs": [
+            "vendor/bin/rule-doc-generator generate src --output-file docs/rector_rules_overview.md --ansi"
+        ]
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true,
+        "allow-plugins": {
+            "rector/extension-installer": true,
+            "phpstan/extension-installer": true,
+            "cweagans/composer-patches": false
+        }
+    }
+}

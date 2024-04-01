@@ -1,0 +1,41 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Parameter \\#1 \\$node \\(PhpParser\\\\Node\\\\Expr\\\\FuncCall\\) of method PHPDevsr\\\\Rector\\\\Codeigniter4\\\\Utils\\\\PassStrictParameterToFunctionParameterRector\\:\\:refactor\\(\\) should be contravariant with parameter \\$node \\(PhpParser\\\\Node\\) of method Rector\\\\Contract\\\\Rector\\\\RectorInterface\\:\\:refactor\\(\\)$#"
+			count: 2
+			path: src/Utils/PassStrictParameterToFunctionParameterRector.php
+
+		-
+			message: "#^Return type \\(array\\<int, string\\>\\) of method PHPDevsr\\\\Rector\\\\Codeigniter4\\\\Utils\\\\PassStrictParameterToFunctionParameterRector\\:\\:getNodeTypes\\(\\) should be covariant with return type \\(array\\<class\\-string\\<PhpParser\\\\Node\\>\\>\\) of method Rector\\\\Contract\\\\Rector\\\\RectorInterface\\:\\:getNodeTypes\\(\\)$#"
+			count: 2
+			path: src/Utils/PassStrictParameterToFunctionParameterRector.php
+
+		-
+			message: "#^Parameter \\#1 \\$node \\(PhpParser\\\\Node\\\\Stmt\\\\TryCatch\\) of method PHPDevsr\\\\Rector\\\\Codeigniter4\\\\Utils\\\\RemoveErrorSuppressInTryCatchStmtsRector\\:\\:refactor\\(\\) should be contravariant with parameter \\$node \\(PhpParser\\\\Node\\) of method Rector\\\\Contract\\\\Rector\\\\RectorInterface\\:\\:refactor\\(\\)$#"
+			count: 2
+			path: src/Utils/RemoveErrorSuppressInTryCatchStmtsRector.php
+
+		-
+			message: "#^Return type \\(array\\<int, string\\>\\) of method PHPDevsr\\\\Rector\\\\Codeigniter4\\\\Utils\\\\RemoveErrorSuppressInTryCatchStmtsRector\\:\\:getNodeTypes\\(\\) should be covariant with return type \\(array\\<class\\-string\\<PhpParser\\\\Node\\>\\>\\) of method Rector\\\\Contract\\\\Rector\\\\RectorInterface\\:\\:getNodeTypes\\(\\)$#"
+			count: 2
+			path: src/Utils/RemoveErrorSuppressInTryCatchStmtsRector.php
+
+		-
+			message: "#^Access to an undefined property PhpParser\\\\Node\\\\FunctionLike\\:\\:\\$params\\.$#"
+			count: 2
+			path: src/Utils/UnderscoreToCamelCaseVariableNameRector.php
+
+		-
+			message: "#^Parameter \\#1 \\$node \\(PhpParser\\\\Node\\\\Expr\\\\Closure\\|PhpParser\\\\Node\\\\Stmt\\\\ClassMethod\\|PhpParser\\\\Node\\\\Stmt\\\\Function_\\|PhpParser\\\\Node\\\\Stmt\\\\Namespace_\\|Rector\\\\PhpParser\\\\Node\\\\CustomNode\\\\FileWithoutNamespace\\) of method PHPDevsr\\\\Rector\\\\Codeigniter4\\\\Utils\\\\UnderscoreToCamelCaseVariableNameRector\\:\\:refactor\\(\\) should be contravariant with parameter \\$node \\(PhpParser\\\\Node\\) of method Rector\\\\Contract\\\\Rector\\\\RectorInterface\\:\\:refactor\\(\\)$#"
+			count: 2
+			path: src/Utils/UnderscoreToCamelCaseVariableNameRector.php
+
+		-
+			message: "#^Return type \\(array\\<int, string\\>\\) of method PHPDevsr\\\\Rector\\\\Codeigniter4\\\\Utils\\\\UnderscoreToCamelCaseVariableNameRector\\:\\:getNodeTypes\\(\\) should be covariant with return type \\(array\\<class\\-string\\<PhpParser\\\\Node\\>\\>\\) of method Rector\\\\Contract\\\\Rector\\\\RectorInterface\\:\\:getNodeTypes\\(\\)$#"
+			count: 2
+			path: src/Utils/UnderscoreToCamelCaseVariableNameRector.php
+
+		-
+			message: "#^Strict comparison using \\=\\=\\= between string and null will always evaluate to false\\.$#"
+			count: 1
+			path: src/Utils/UnderscoreToCamelCaseVariableNameRector.php
