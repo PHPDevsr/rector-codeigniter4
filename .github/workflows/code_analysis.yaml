@@ -28,7 +28,7 @@ jobs:
                         run: composer lint
 
                     -
-                        name: 'Rector Dry Run'
+                        name: 'Rector'
                         run: composer rector
 
                     -
