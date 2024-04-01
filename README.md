@@ -1,24 +1,24 @@
-# Rector Rules for Laravel
-[![Tests](https://github.com/driftingly/rector-laravel/actions/workflows/tests.yaml/badge.svg)](https://github.com/driftingly/rector-laravel/actions/workflows/tests.yaml)
-[![Code Analysis](https://github.com/driftingly/rector-laravel/actions/workflows/code_analysis.yaml/badge.svg)](https://github.com/driftingly/rector-laravel/actions/workflows/code_analysis.yaml)
-[![Packagist Downloads](https://img.shields.io/packagist/dm/driftingly/rector-laravel)](https://packagist.org/packages/driftingly/rector-laravel/stats)
-[![Packagist Version](https://img.shields.io/packagist/v/driftingly/rector-laravel)](https://packagist.org/packages/driftingly/rector-laravel)
+# Rector Rules for Codeigniter4
+[![Tests](https://github.com/PHPDevsr/rector-codeigniter4/actions/workflows/tests.yaml/badge.svg)](https://github.com/PHPDevsr/rector-codeigniter4/actions/workflows/tests.yaml)
+[![Code Analysis](https://github.com/PHPDevsr/rector-codeigniter4/actions/workflows/code_analysis.yaml/badge.svg)](https://github.com/PHPDevsr/rector-codeigniter4/actions/workflows/code_analysis.yaml)
+[![Packagist Downloads](https://img.shields.io/packagist/dm/PHPDevsr/rector-codeigniter4)](https://packagist.org/packages/PHPDevsr/rector-codeigniter4/stats)
+[![Packagist Version](https://img.shields.io/packagist/v/PHPDevsr/rector-codeigniter4)](https://packagist.org/packages/PHPDevsr/rector-codeigniter4)
 
-See available [Laravel rules](/docs/rector_rules_overview.md)
+See available [Codeigniter4 rules](/docs/rector_rules_overview.md)
 
 ## Install
 
 This package is a [Rector](https://github.com/rectorphp/rector) extension developed by the Laravel community.
 
-Install the `RectorLaravel` package as dependency:
+Install the `PHPDevsr\Rector\Codeigniter4` package as dependency:
 
 ```bash
-composer require driftingly/rector-laravel --dev
+composer require phpdevsr/rector-codeigniter4 --dev
 ```
 
 ## Use Sets
 
-To add a set to your config, use `RectorLaravel\Set\LaravelSetList` class and pick one of the constants:
+To add a set to your config, use `PHPDevsr\Rector\Codeigniter4\Set\CodeigniterSetList` class and pick one of the constants:
 
 ```php
 <?php
@@ -26,11 +26,11 @@ To add a set to your config, use `RectorLaravel\Set\LaravelSetList` class and pi
 declare(strict_types=1);
 
 use Rector\Config\RectorConfig;
-use RectorLaravel\Set\LaravelSetList;
+use PHPDevsr\Rector\Codeigniter4\Set\CodeigniterSetList;
 
 return RectorConfig::configure()
     ->withSets([
-        LaravelSetList::LARAVEL_110
+        CodeigniterSetList::CODEIGNITER_44
     ]);
 ```
 
