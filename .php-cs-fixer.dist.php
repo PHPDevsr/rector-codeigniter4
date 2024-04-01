@@ -13,14 +13,16 @@ declare(strict_types=1);
 
 use CodeIgniter\CodingStandard\CodeIgniter4;
 use Nexus\CsConfig\Factory;
+use Nexus\CsConfig\Fixer\Comment\NoCodeSeparatorCommentFixer;
+use Nexus\CsConfig\FixerGenerator;
 use PhpCsFixer\Finder;
 
 $finder = Finder::create()
     ->files()
     ->in([
-        __DIR__ . '/src/',
-        __DIR__ . '/tests/',
-        __DIR__ . '/config/',
+        __DIR__ . '/src',
+        __DIR__ . '/config',
+        __DIR__ . '/tests',
     ])
     ->append([
         __FILE__,
@@ -33,12 +35,23 @@ $overrides = [
 ];
 
 $options = [
-    'finder'    => $finder,
-    'cacheFile' => '.php-cs-fixer.cache',
+    'finder'       => $finder,
+    'cacheFile'    => '.php-cs-fixer.cache',
 ];
 
-return Factory::create(new CodeIgniter4(), $overrides, $options)->forLibrary(
+$config = Factory::create(new CodeIgniter4(), $overrides, $options)->forLibrary(
     'CodeIgniter Rector',
     'PHPDevsr',
     'admin@phpdevsr.com'
 );
+
+// @TODO: remove this check when support for PHP 7.4 is dropped
+if (PHP_VERSION_ID >= 80000) {
+    $config
+        ->registerCustomFixers(FixerGenerator::create('vendor/nexusphp/cs-config/src/Fixer', 'Nexus\\CsConfig\\Fixer'))
+        ->setRules(array_merge($config->getRules(), [
+            NoCodeSeparatorCommentFixer::name() => true,
+        ]));
+}
+
+return $config;
