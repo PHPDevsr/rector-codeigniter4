@@ -23,7 +23,7 @@ jobs:
                     php-version: 8.2
                     coverage: none
 
-            -   uses: "ramsey/composer-install@v2"
+            -   uses: "ramsey/composer-install@v3"
 
             # downgrade /src to PHP 7.2
             -   run: vendor/bin/rector process src config --config build/rector-downgrade-php-72.php --ansi
