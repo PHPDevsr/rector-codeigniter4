@@ -1,5 +1,5 @@
 # Rector Rules for Codeigniter4
-[![Tests](https://github.com/PHPDevsr/rector-codeigniter4/actions/workflows/tests.yaml/badge.svg)](https://github.com/PHPDevsr/rector-codeigniter4/actions/workflows/tests.yaml)
+[![Tests](https://github.com/PHPDevsr/rector-codeigniter4/actions/workflows/tests.yaml/badge.svg)](https://github.com/PHPDevsr/rector-codeigniter4/actions/workflows/test-phpunit.yaml)
 [![Code Analysis](https://github.com/PHPDevsr/rector-codeigniter4/actions/workflows/code_analysis.yaml/badge.svg)](https://github.com/PHPDevsr/rector-codeigniter4/actions/workflows/code_analysis.yaml)
 [![Packagist Downloads](https://img.shields.io/packagist/dm/PHPDevsr/rector-codeigniter4)](https://packagist.org/packages/PHPDevsr/rector-codeigniter4/stats)
 [![Packagist Version](https://img.shields.io/packagist/v/PHPDevsr/rector-codeigniter4)](https://packagist.org/packages/PHPDevsr/rector-codeigniter4)
