@@ -50,10 +50,6 @@ return static function (RectorConfig $rectorConfig): void {
         PHPUnitSetList::PHPUNIT_100,
     ]);
 
-    // auto import fully qualified class names
-    $rectorConfig->importNames();
-    $rectorConfig->removeUnusedImports();
-
     $rectorConfig->rules([
         UnderscoreToCamelCaseVariableNameRector::class,
         SimplifyUselessVariableRector::class,
