@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use PHPDevsr\Rector\Codeigniter4\Set\CodeigniterSetList;
+use Rector\Caching\ValueObject\Storage\FileCacheStorage;
 use Rector\Config\RectorConfig;
 use Rector\Php55\Rector\String_\StringClassNameToClassConstantRector;
 
@@ -15,6 +16,13 @@ return RectorConfig::configure()
         __DIR__ . '/src',
         __DIR__ . '/tests',
         __DIR__ . '/config',
+    ])
+    ->withParallel(120, 8, 10)
+    ->withCache('/tmp/rector', FileCacheStorage::class)
+    ->withPHPStanConfigs([
+        __DIR__ . '/phpstan.neon.dist',
+        __DIR__ . '/vendor/codeigniter/phpstan-codeigniter/extension.neon',
+        __DIR__ . '/vendor/phpstan/phpstan-strict-rules/rules.neon',
     ])
     ->withSkip([
         // for tests
