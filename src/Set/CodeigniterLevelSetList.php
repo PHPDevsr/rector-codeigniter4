@@ -4,9 +4,7 @@ declare(strict_types=1);
 
 namespace PHPDevsr\Rector\Codeigniter4\Set;
 
-use Rector\Set\Contract\SetListInterface;
-
-final class CodeigniterLevelSetList implements SetListInterface
+final class CodeigniterLevelSetList
 {
     /**
      * @var string
