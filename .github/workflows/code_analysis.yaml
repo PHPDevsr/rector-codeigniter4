@@ -45,14 +45,15 @@ jobs:
             -   uses: ramsey/composer-install@v3
 
             -   name: Rector Cache
-                if: ${{ matrix.actions.name }} === 'Rector'
+                if: matrix.actions == 'Rector'
                 uses: actions/cache@v4
                 with:
                     path: /tmp/rector
                     key: ${{ runner.os }}-rector-${{ github.run_id }}
                     restore-keys: ${{ runner.os }}-rector-
 
-            -   if: ${{ matrix.actions.name }} === 'Rector'
+            -   name: Make Folder Cache Rector
+                if: matrix.actions == 'Rector'
                 run: mkdir -p /tmp/rector
 
             -   run: ${{ matrix.actions.run }}
