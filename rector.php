@@ -6,7 +6,7 @@ use Rector\Config\RectorConfig;
 use Rector\Php55\Rector\String_\StringClassNameToClassConstantRector;
 
 return RectorConfig::configure()
-    ->withImportNames()
+    ->withImportNames(removeUnusedImports:true)
     ->withPaths([
         __DIR__ . '/src',
         __DIR__ . '/tests',
