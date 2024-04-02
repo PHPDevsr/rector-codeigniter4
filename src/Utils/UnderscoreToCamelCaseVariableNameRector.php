@@ -168,7 +168,7 @@ final class UnderscoreToCamelCaseVariableNameRector extends AbstractRector
 
     private function updateDocblock(string $variableName, string $camelCaseName, ?FunctionLike $functionLike): void
     {
-        if (!$functionLike instanceof FunctionLike) {
+        if ($functionLike === null) {
             return;
         }
 
