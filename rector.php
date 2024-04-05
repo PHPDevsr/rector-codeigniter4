@@ -10,7 +10,7 @@ use Rector\Php55\Rector\String_\StringClassNameToClassConstantRector;
 return RectorConfig::configure()
     ->withImportNames(removeUnusedImports:true)
     ->withSets([
-        CodeigniterSetList::CODEIGNITER_44,
+        CodeigniterSetList::CODEIGNITER_45,
     ])
     ->withPaths([
         __DIR__ . '/src',

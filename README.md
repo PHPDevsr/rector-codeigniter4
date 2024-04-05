@@ -8,7 +8,7 @@ See available [Codeigniter4 rules](/docs/rector_rules_overview.md)
 
 ## Requirement
 
-This package initiated, CodeIgniter for `4.5` already prepare rector with minimum PHP 8.1. And we follow minimum PHP 8.1 for the future.
+Minimum PHP 8.1
 
 ## Install
 

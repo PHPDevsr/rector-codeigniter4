@@ -10,4 +10,9 @@ final class CodeigniterSetList
      * @var string
      */
     public const CODEIGNITER_44 = __DIR__ . '/../../config/sets/codeigniter44.php';
+
+    /**
+     * @var string
+     */
+    public const CODEIGNITER_45 = __DIR__ . '/../../config/sets/codeigniter45.php';
 }
