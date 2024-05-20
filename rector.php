@@ -19,11 +19,6 @@ return RectorConfig::configure()
     ])
     ->withParallel(120, 8, 10)
     ->withCache('/tmp/rector', FileCacheStorage::class)
-    ->withPHPStanConfigs([
-        __DIR__ . '/phpstan.neon.dist',
-        __DIR__ . '/vendor/codeigniter/phpstan-codeigniter/extension.neon',
-        __DIR__ . '/vendor/phpstan/phpstan-strict-rules/rules.neon',
-    ])
     ->withSkip([
         // for tests
         '*/Source/*',

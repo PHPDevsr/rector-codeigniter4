@@ -40,7 +40,6 @@ use Rector\Strict\Rector\If_\BooleanInIfConditionRuleFixerRector;
 use Rector\TypeDeclaration\Rector\Empty_\EmptyOnNullableObjectToInstanceOfRector;
 use Rector\TypeDeclaration\Rector\StmtsAwareInterface\DeclareStrictTypesRector;
 
-// see: https://laravel.com/docs/5.0/upgrade
 return static function (RectorConfig $rectorConfig): void {
     $rectorConfig->import(__DIR__ . '/../config.php');
 
@@ -84,6 +83,12 @@ return static function (RectorConfig $rectorConfig): void {
         BooleanInIfConditionRuleFixerRector::class,
         SingleInArrayToCompareRector::class,
         VersionCompareFuncCallToConstantRector::class,
+    ]);
+
+    $rectorConfig->phpstanConfigs([
+        './phpstan.neon.dist',
+        './vendor/codeigniter/phpstan-codeigniter/extension.neon',
+        './vendor/phpstan/phpstan-strict-rules/rules.neon',
     ]);
 
     $rectorConfig

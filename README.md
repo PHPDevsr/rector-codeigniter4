@@ -12,7 +12,7 @@ Minimum PHP 8.1
 
 ## Install
 
-This package is a [Rector](https://github.com/rectorphp/rector) extension developed by the Laravel community.
+This package is a [Rector](https://github.com/rectorphp/rector) extension developed by the PHPDevsr based on Codeigniter4 Community. In set `4.5` required `PHPStan`, you needed create `phpstan.neon.dist` in root project.
 
 Install the `PHPDevsr\Rector\Codeigniter4` package as dependency:
 
@@ -34,7 +34,7 @@ use PHPDevsr\Rector\Codeigniter4\Set\CodeigniterSetList;
 
 return RectorConfig::configure()
     ->withSets([
-        CodeigniterSetList::CODEIGNITER_44
+        CodeigniterSetList::CODEIGNITER_45
     ]);
 ```
 

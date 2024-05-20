@@ -14,7 +14,6 @@ parameters:
         - */Fixture/*
         - */Fixture*/*
 
-    checkGenericClassInNonGenericObjectType: false
     checkMissingCallableSignature: true
     treatPhpDocTypesAsCertain: false
     strictRules:
