@@ -85,12 +85,6 @@ return static function (RectorConfig $rectorConfig): void {
         VersionCompareFuncCallToConstantRector::class,
     ]);
 
-    $rectorConfig->phpstanConfigs([
-        './phpstan.neon.dist',
-        './vendor/codeigniter/phpstan-codeigniter/extension.neon',
-        './vendor/phpstan/phpstan-strict-rules/rules.neon',
-    ]);
-
     $rectorConfig
         ->ruleWithConfiguration(StringClassNameToClassConstantRector::class, [
             // keep '\\' prefix string on string '\Foo\Bar'

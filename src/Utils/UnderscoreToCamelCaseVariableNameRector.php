@@ -14,6 +14,7 @@ namespace PHPDevsr\Rector\Codeigniter4\Utils;
 
 use PhpParser\Comment\Doc;
 use PhpParser\Node;
+use PhpParser\Node\Expr;
 use PhpParser\Node\Expr\Closure;
 use PhpParser\Node\Expr\Variable;
 use PhpParser\Node\FunctionLike;
@@ -159,7 +160,7 @@ final class UnderscoreToCamelCaseVariableNameRector extends AbstractRector
         return $node;
     }
 
-    private function updateDocblock(string $variableName, string $camelCaseName, ?FunctionLike $functionLike): void
+    private function updateDocblock(string $variableName, Expr|string $camelCaseName, ?FunctionLike $functionLike): void
     {
         if ($functionLike === null) {
             return;
@@ -171,11 +172,11 @@ final class UnderscoreToCamelCaseVariableNameRector extends AbstractRector
         }
 
         $docCommentText = $docComment->getText();
-        if ($docCommentText === null) {
+        if (! $docCommentText) {
             return;
         }
 
-        if (!preg_match(sprintf(self::PARAM_NAME_REGEX, $variableName), $docCommentText)) {
+        if (! preg_match(sprintf(self::PARAM_NAME_REGEX, $variableName), $docCommentText)) {
             return;
         }
 

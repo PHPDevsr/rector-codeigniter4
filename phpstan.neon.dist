@@ -2,7 +2,7 @@ includes:
     - phpstan-baseline.neon
 
 parameters:
-    level: 6
+    level: 7
 
     paths:
         - config
@@ -16,9 +16,3 @@ parameters:
 
     checkMissingCallableSignature: true
     treatPhpDocTypesAsCertain: false
-    strictRules:
-        allRules: false
-        disallowedLooseComparison: true
-        booleansInConditions: true
-        disallowedConstructs: true
-        matchingInheritedMethodNames: true

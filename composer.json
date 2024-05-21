@@ -5,15 +5,16 @@
     "description": "Rector upgrades rules for Codeigniter4",
     "require": {
         "php": ">=8.1",
-        "rector/rector": "^1.0",
-        "codeigniter/phpstan-codeigniter": "^1.4",
-        "phpstan/phpstan": "^1.11",
-        "phpstan/phpstan-strict-rules": "^1.6"
+        "rector/rector": "^1.1",
+        "symplify/rule-doc-generator": "^12.1"
     },
     "require-dev": {
-        "phpunit/phpunit": "^10.5.16",
-        "symplify/rule-doc-generator": "^12.1",
-        "codeigniter/coding-standard": "^1.7"
+        "codeigniter/coding-standard": "^1.7",
+        "codeigniter/phpstan-codeigniter": "^1.4",
+        "ergebnis/composer-normalize": "^2.42",
+        "phpstan/phpstan": "^1.11",
+        "phpstan/phpstan-strict-rules": "^1.6",
+        "phpunit/phpunit": "^10.5.16"
     },
     "autoload": {
         "psr-4": {
@@ -43,6 +44,7 @@
         "optimize-autoloader": true,
         "sort-packages": true,
         "allow-plugins": {
+            "ergebnis/composer-normalize": true,
             "rector/extension-installer": true,
             "phpstan/extension-installer": true
         }
