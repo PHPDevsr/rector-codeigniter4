@@ -14,7 +14,7 @@
         "ergebnis/composer-normalize": "^2.42",
         "phpstan/phpstan": "^1.11",
         "phpstan/phpstan-strict-rules": "^1.6",
-        "phpunit/phpunit": "^10.5.16"
+        "phpunit/phpunit": "^11.3.1"
     },
     "autoload": {
         "psr-4": {
